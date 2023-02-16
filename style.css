@@ -1,6 +1,7 @@
 .container{
     color: #000e4b;
     size-adjust:unset;
+    
 }
 
 /* hero background image */
@@ -37,6 +38,11 @@
 /* about section image css */
 .imageAboutPage {
     width: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
 }
 
 /* services section css */
@@ -82,19 +88,30 @@ color: #eeeeee;
 }
 /* footer styling */
 #footer {
-    background-color: #808080;
+    background-color: #242424;
     text-align: center;
 }
 
 /* spacing on all sections */
 #about, #services, #portfolio, #contact {
-    margin-top: 4rem;
+    margin-top: 2 rem;
     padding-top: 4rem;
 }
 #contact {
     padding-bottom: 4rem;
+    background-color: #001d52;
 }
 
 .portfolioContent {
-    background-color: #1cd16d;
+    background-color: #001d52;
+}
+
+.text-center{
+    background-color: #001d52;
+    color: #eeeeee;
+}
+
+.imagen{
+    background-color: blue;
+    size: 1cm;
 }
