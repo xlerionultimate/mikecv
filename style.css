@@ -1,16 +1,28 @@
+.container{
+    color: #000e4b;
+    size-adjust:unset;
+}
+
 /* hero background image */
 .bgimage {
     height:100vh;
     background: url('images/heroImage.jpg');
-    background-size:cover;
+    background-size:contain;
     position:relative;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    
 }
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
+    color: rgb(219, 219, 219);
 }
 .hero_desc {
-    font-size: 2rem;
+    font-size: 1rem;
+    color: #eeeeee;
 }
 .hero-text {
     text-align: center;
@@ -18,7 +30,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(255, 255, 255);
+    background-color: #2929299c;
 }
 
 /* about section image css */
@@ -40,24 +53,30 @@
     text-align: center;
 }
 .card:hover .servicesIcon {
-    color: #008000;
+    color: #001d52;
 }
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #272727;
 }
 
+.navbar {
+background-color: #272727;
+color: #eeeeee;
+}
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 /* social media icons styling */
 .social-icons {
-    font-size: 36px;
+    font-size: 16px;
     cursor: pointer;
+    padding: auto;
+    position: left;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
+    color: #1cd16d;
 
     color: #000000;
 }
@@ -74,4 +93,8 @@
 }
 #contact {
     padding-bottom: 4rem;
+}
+
+.portfolioContent {
+    background-color: #1cd16d;
 }
