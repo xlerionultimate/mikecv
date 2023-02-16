@@ -37,7 +37,7 @@
 
 /* about section image css */
 .imageAboutPage {
-    width: 100%;
+    width: 80%;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -82,7 +82,7 @@ color: #eeeeee;
     position: left;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #1cd16d;
+    color: #1c4cd1;
 
     color: #000000;
 }
