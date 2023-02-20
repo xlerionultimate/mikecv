@@ -39,29 +39,10 @@
         </script>
         <button onclick="getLocation()">Try It</button>
 
-<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
-
-<p id="demo"></p>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+<body onload="checkCookie()"></body>
         </head>
         
-        <body onload="checkCookie()"></body>
+        
 <head>
   <title>Miguel Rodriguez - Portafolio</title>
   <meta charset="utf-8">
@@ -74,13 +55,16 @@ function showPosition(position) {
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
   <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
-    <div class="container">
-        <a class="navbar-brand" href="#">Mike</a>
+    <div class="container-nav">
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
+                <li class="navbar-active">
+                 <a class="nav-link" alt="" href="/images/blackhole.png">Algo</a> 
+                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#home">Inicio</a>
                 </li>
@@ -139,8 +123,38 @@ function showPosition(position) {
                             <a href="https://www.linkedin.com/in/mikerodriguez84/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://wa.link/053d7o" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
+                       
+                        <div>
+                            <section class="habilidades">
+                                <p>PYTHON</p>
+                                <div class="container1">
+                                <div class="skills python">70%</div>
+                                </div>
+    
+                                <p>HTML</p>
+                                <div class="container1">
+                                <div class="skills html">80%</div>
+                                </div>
+                
+                                <p>CSS</p>
+                                <div class="container1">
+                                <div class="skills css">80%</div>
+                                </div>
+                
+                                <p>JAVASCRIPT</p>
+                                <div class="container1">
+                                <div class="skills js">65%</div>
+                                </div>
+                
+                                <p>PHP</p>
+                                <div class="container1">
+                                <div class="skills php">60%</div>
+                                </div>
+                        </section>
+                        </div>
                         <p><button href="https://wa.link/053d7o" target="_blank">Contacto</button></p>
                       </div> 
+                      
                 </div>
 
                 <div class="col-lg-8">
@@ -148,7 +162,7 @@ function showPosition(position) {
                     <p> Amante de la música y la tecnología. Busco resultados y soluciones a problemas y retos que brinden mejoras en la vida diaria, social y empresarial.
                         
                     </p>
-                    <div class="row mt-3">
+                    <div class="row mt-6">
                         <div class="col-md-6">
                             <ul>
                                 <li>Nombre: Miguel Rodríguez Martínez</li>
@@ -162,32 +176,7 @@ function showPosition(position) {
                         <p> Mi profesión me apasiona y me motiva, por eso siempre estoy buscando mejorar mi técnica y adquirir más habilidades, en general siempre busco oportunidades para crecer. Cada uno de mis proyectos, ya sean en solitario o en colaboración, me permitieron avanzar un poco en esta industria competitiva. Explora mi portafolio y contáctame si tienes alguna duda.
                         </p>
                     </div>
-                    <section class="habilidades">
-                            <p>PYTHON</p>
-                            <div class="container1">
-                            <div class="skills python">70%</div>
-                            </div>
-
-                            <p>HTML</p>
-                            <div class="container1">
-                            <div class="skills html">80%</div>
-                            </div>
-            
-                            <p>CSS</p>
-                            <div class="container1">
-                            <div class="skills css">80%</div>
-                            </div>
-            
-                            <p>JAVASCRIPT</p>
-                            <div class="container1">
-                            <div class="skills js">65%</div>
-                            </div>
-            
-                            <p>PHP</p>
-                            <div class="container1">
-                            <div class="skills php">60%</div>
-                            </div>
-                    </section>
+                  
                 </div>
             </div>
     </section>

@@ -1,23 +1,32 @@
 
 .collapse {
     size-adjust:unset;
+
+}
+
+.container-nav{
+    background-color: #000000;
+    width: auto;
+    justify-self: unset;
+}
+
+.container{
+    color: #000000;
+    size-adjust:unset;
+    position: -webkit-sticky; /* Safari */
+    
 }
 .container2{
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    background-color: #000;
+    background-color: #ff0000;
     size-adjust: unset;
     
 
 }
 
-.container{
-    color: #00253a;
-    size-adjust:unset;
-    text-transform: capitalize;
-    
-}
+
 
 /* hero background image */
 .bgimage {
@@ -26,9 +35,9 @@
     background-size:contain;
     position:relative;
     background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 /* text css above hero image*/
@@ -47,7 +56,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
-    background-color: #2929299c;
+    background-color: #292929;
 }
 
 /* about section image css */
@@ -74,19 +83,31 @@
     text-align: center;
 }
 .card:hover .servicesIcon {
-    color: #001d52;
+    color: #1be4ff;
 }
 .servicesText:hover {
-    border: 1px solid #272727;
+    border: 1px solid #00eeff;
 }
 
+
 .navbar {
-background-color: #272727;
-color: #eeeeee;
+background-color: #000000;
+size-adjust:initial;
 }
+
+.navbar-collapse.nav-link {
+    color: #ff0000;
+}
+
+.nav-item{
+    color: #00eeff;
+}
+
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: rgb(255, 255, 255);
+   align-items: flex-end;
+   background-color: #0a0a0a;
+   place-items: inherit;
 }
 
 /* social media icons styling */
@@ -95,10 +116,9 @@ color: #eeeeee;
     cursor: pointer;
     padding: auto;
     position: left;
-    padding-bottom: 1%;
-}
+    }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #1c4cd1;
+    color: #ffffff;
 
     color: #000000;
 }
@@ -117,27 +137,29 @@ color: #eeeeee;
 }
 #contact {
     padding-bottom: 4rem;
-    background-color: #001d52;
+    background-color: #012458;
 }
 
 .portfolioContent {
-    background-color: #001d52;
+    background-color: #012458;
 }
 
 .text-center{
-    background-color: #f8f8f83f;
+    background-color: #012458;
     color: #eeeeee;
 }
 
 .text-center1{
-    background-color: #00000093;
-    color: #eeeeee;
-    padding-left: 5%;
+    background-color: #012458;
+    color: #ffffff;
+    padding: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
 .imagen{
-    background-color: rgb(114, 114, 114);
-    size: 1cm;
+    background-color: rgb(17, 17, 17);
+    size: 2cm;
 }
 
 /* Make sure that padding behaves as expected */
@@ -145,27 +167,37 @@ color: #eeeeee;
 
 /* Container for skill bars */
 .container1 {
-  width: 50%; /* Full width */
-  background-color: #ddd; /* Grey background */
+  width: 100%; /* Full width */
+  background-color: #ffffff; /* Grey background */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
   
+}
+
+.navbar-brand{
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    width: 800px;
 }
 
 .skills {
   text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
+  padding: 10px; /* Add top padding */
   color: white; /* White text color */
-  width: auto;
+  width:fit-content;
 }
 
 .python {width: 70%; background-color: #012458;} /* Blue */
-.html {width: 80%; background-color: #01e994;} /* Blue */
-.css {width: 80%; background-color: #00098b;} /* Blue */
-.js {width: 65%; background-color: #00e1ff;} /* Blue */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
+.html {width: 80%; background-color: #585858;} /* Blue */
+.css {width: 80%; background-color: #012458;} /* Blue */
+.js {width: 65%; background-color: #585858;} /* Blue */
+.php {width: 60%; background-color: #012458;} /* Dark Grey */
 
 .habilidades {
     position: relative;
+    color:#ffffff;
 }
 
 .cards {
@@ -173,21 +205,28 @@ color: #eeeeee;
     max-width: 250px;
     margin: auto;
     text-align: center;
+    background-color: #858585;
     
     
   }
 
  
   .titulo{
-    padding-top: 10%;
+    padding: 1%;
     font-style: normal;
-    background-color: #00098b;
+    background-color: #ffffff;
+    color: #474747;
+    font-size: medium;
+    
   }
   
   .title {
-    color: grey;
-    padding-top: 1%;
+    color: rgb(255, 255, 255);
+    padding: 1%;
     font-size: 18px;
+    background-color: #000000;
+
+
   }
   
   button {
@@ -212,10 +251,11 @@ color: #eeeeee;
   
   button:hover, a:hover {
     opacity: 0.7;
+    color: #00eeff;
   }
 
   .social1 {
-    background-color: #d3d1d1;
+    background-color: #000000;
     padding-bottom: 4%;
     padding-top: 4%;
     width: 100%;
@@ -223,5 +263,6 @@ color: #eeeeee;
   }
 
   .imagenperfil {
-    padding-top: 5%;
+    padding: 5%;
+    background-color: #ffffff;
   }
