@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><script async="" src="Sentra_files/analytics.js"></script><script>
+    window[Symbol.for('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')] = new (class{constructor(e,t){this.name=e,this.destination=t,this.serverListeners={},this.bgRequestsListeners={},this.bgEventsListeners={},window.addEventListener("message",e=>{const t=e.data,n=!(t.destination&&t.destination===this.name),s=!t.event;if(!n&&!s)if("MARIO_POST_SERVER__BG_RESPONSE"===t.event){const e=t.args;if(this.hasBgRequestListener(e.requestId)){try{this.bgRequestsListeners[e.requestId](e.response)}catch(e){}delete this.bgRequestsListeners[e.requestId]}}else if("MARIO_POST_SERVER__BG_EVENT"===t.event){const e=t.args;if(this.hasBgEventListener(e.event))try{this.bgEventsListeners[t.id](e.payload)}catch(e){}}else if(this.hasServerListener(t.event))try{this.serverListeners[t.event](t.args)}catch(e){}})}emitToServer(e,t){const n=this.generateUIID(),s={args:t,destination:this.destination,event:e,id:n};return window.postMessage(s,location.origin),n}emitToBg(e,t){const n=this.generateUIID(),s={bgEventName:e,requestId:n,args:t};return this.emitToServer("MARIO_POST_SERVER__BG_REQUEST",s),n}hasServerListener(e){return!!this.serverListeners[e]}hasBgRequestListener(e){return!!this.bgRequestsListeners[e]}hasBgEventListener(e){return!!this.bgEventsListeners[e]}fromServerEvent(e,t){this.serverListeners[e]=t}fromBgEvent(e,t){this.bgEventsListeners[e]=t}fromBgResponse(e,t){this.bgRequestsListeners[e]=t}generateUIID(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,(function(e){const t=16*Math.random()|0;return("x"===e?t:3&t|8).toString(16)}))}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}', 'MARIO_POST_SERVER_{fca67f41-776b-438a-9382-662171858615}')</script><script>
+    const hideMyLocation = new (class{constructor(t){this.clientKey=t,this.watchIDs={},this.client=window[Symbol.for(t)];const e=navigator.geolocation.getCurrentPosition,n=navigator.geolocation.watchPosition,o=navigator.geolocation.clearWatch,r=this;navigator.geolocation.getCurrentPosition=function(t,n,o){r.handle(e,"GET",t,n,o)},navigator.geolocation.watchPosition=function(t,e,o){return r.handle(n,"WATCH",t,e,o)},navigator.geolocation.clearWatch=function(t){if(-1===t)return;const e=r.watchIDs[t];return delete r.watchIDs[t],o.apply(this,[e])}}handle(t,e,n,o,r){const i=this.client.emitToBg("HIDE_MY_LOCATION__GET_LOCATION");let a=this.getRandomInt(0,1e5);if(this.client.fromBgResponse(i,i=>{if(i.enabled)if("SUCCESS"===i.status){const t=this.map(i);n(t)}else{const t=this.errorObj();o(t),a=-1}else{const i=[n,o,r],c=t.apply(navigator.geolocation,i);"WATCH"===e&&(this.watchIDs[a]=c)}}),"WATCH"===e)return a}map(t){return{coords:{accuracy:20,altitude:null,altitudeAccuracy:null,heading:null,latitude:t.latitude,longitude:t.longitude,speed:null},timestamp:Date.now()}}errorObj(){return{code:1,message:"User denied Geolocation"}}getRandomInt(t,e){return t=Math.ceil(t),e=Math.floor(e),Math.floor(Math.random()*(e-t+1))+t}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')
+  </script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Free CSS | Free CSS Templates | Demo of the HTML CSS Template Sentra</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Sentra_files/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Sentra_files/plugins.css">
+<link rel="stylesheet" type="text/css" href="Sentra_files/styles.css">
+<script src="Sentra_files/modernizer.min.js"></script>
+<style type="text/css">
+#freecssfooter{display:block;width:100%;padding:120px 0 20px;overflow:hidden;background-color:transparent;z-index:5000;text-align:center;}
+#freecssfooter div#fcssholder div{display:none;}
+#freecssfooter div#fcssholder div:first-child{display:block;}
+#freecssfooter div#fcssholder div:first-child a{float:none;margin:0 auto;}
+</style><script type="text/javascript" async="" src="Sentra_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_b893e54e42ad5b76e7b252f59be18e67" src="Sentra_files/s_b893e54e42ad5b76e7b252f59be18e67.js" async="async"></script><script type="text/javascript" src="Sentra_files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" id="_bsaPRO_js" src="Sentra_files/%C3%ADndice" async="async"></script></head>
+<body>
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<header class="responsive-nav hidden-lg hidden-md nav-up" style="">
+  <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+  <div id="main-nav" class="collapse navbar-collapse">
+    <nav>
+      <ul class="nav navbar-nav">
+        <li><a href="#top" class="">Home</a></li>
+        <li><a href="#featured" class="">Featured</a></li>
+        <li><a href="#projects" class="active-section">Recent Projects</a></li>
+        <li><a href="#video">Presentation</a></li>
+        <li><a href="#blog">Blog Entries</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="sidebar-navigation hidde-sm hidden-xs">
+  <div class="logo"><a href="https://www.free-css.com/free-css-templates">Sen<em>tra</em></a></div>
+  <nav>
+    <ul>
+      <li><a href="#top" class=""><span class="rect"></span> <span class="circle"></span> Home</a></li>
+      <li><a href="#featured" class=""><span class="rect"></span> <span class="circle"></span> Featured</a></li>
+      <li><a href="#projects" class="active-section"><span class="rect"></span> <span class="circle"></span> Recent Work</a></li>
+      <li><a href="#video"><span class="rect"></span> <span class="circle"></span> Presentation</a></li>
+      <li><a href="#blog"><span class="rect"></span> <span class="circle"></span> Blog Entires</a></li>
+      <li><a href="#contact"><span class="rect"></span> <span class="circle"></span> Contact Us</a></li>
+    </ul>
+  </nav>
+  <ul class="social-icons">
+    <li><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-rss"></i></a></li>
+    <li><a href="https://www.free-css.com/free-css-templates"><i class="fa fa-behance"></i></a></li>
+  </ul>
+</div>
+<div class="slider">
+  <div class="Modern-Slider content-section slick-initialized slick-slider slick-dotted" id="top" role="toolbar"><button class="PrevArrow slick-arrow" style="display: block;"></button>
+    <div aria-live="polite" class="slick-list"><div class="slick-track" style="opacity: 1; width: 4047px;" role="listbox"><div class="item item-1 slick-slide" data-slick-index="0" aria-hidden="true" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 1000ms linear 0s;" tabindex="-1" role="option" aria-describedby="slick-slide00">
+      <div class="img-fill">
+        <div class="image"></div>
+        <div class="info">
+          <div>
+            <h1>Beautiful Template<br>
+              Sentra</h1>
+            <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
+              Please share our site link to your friends.</p>
+            <div class="white-button button"><a href="#featured" tabindex="-1">Discover More</a></div>
+          </div>
+        </div>
+      </div>
+    </div><div class="item item-2 slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1349px; position: relative; left: -1349px; top: 0px; z-index: 998; opacity: 0; transition: opacity 1000ms linear 0s;" tabindex="-1" role="option" aria-describedby="slick-slide01">
+      <div class="img-fill">
+        <div class="image"></div>
+        <div class="info">
+          <div>
+            <h1>Please tell<br>
+              your friends</h1>
+            <p>Support templatemo by sharing a link to your friends.<br>
+              Thank you for helping us.</p>
+            <div class="white-button button"><a href="#featured" tabindex="0">Share More</a></div>
+          </div>
+        </div>
+      </div>
+    </div><div class="item item-3 slick-slide slick-current slick-active" data-slick-index="2" aria-hidden="false" style="width: 1349px; position: relative; left: -2698px; top: 0px; z-index: 1000; opacity: 1; transition: opacity 1000ms linear 0s;" tabindex="-1" role="option" aria-describedby="slick-slide02">
+      <div class="img-fill">
+        <div class="image"></div>
+        <div class="info">
+          <div>
+            <h1>Suspendisse suscipit<br>
+              nulla sed</h1>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices<br>
+              posuere cubilia Curae; Sed at massa turpis.</p>
+            <div class="white-button button"><a href="#featured" tabindex="-1">Learn More</a></div>
+          </div>
+        </div>
+      </div>
+    </div></div></div>
+    
+    
+  <button class="NextArrow slick-arrow" style="display: inline-block;"></button><ul class="slick-dots" style="display: block;" role="tablist"><li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01" class=""><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02" class="slick-active"><button type="button" data-role="none" role="button" tabindex="0">3</button></li></ul></div>
+</div>
+<div class="page-content">
+  <section id="featured" class="content-section">
+    <div class="section-heading">
+      <h1>Featured<br>
+        <em>Places</em></h1>
+      <p>Praesent pellentesque efficitur magna, <br>
+        sed pellentesque neque malesuada vitae.</p>
+    </div>
+    <div class="section-content">
+      <div class="owl-carousel owl-theme owl-loaded owl-drag">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2865px;"><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_1.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Lorem ipsum dolor</h4>
+            <span>Proin et sapien</span>
+            <p>#1 You are allowed to use Sentra Template for your 
+business or client websites. You can use it for commercial or 
+non-commercial or educational purposes.</p>
+          </div>
+        </div></div><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_2.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Phasellus a lacus ac odio</h4>
+            <span>Maximus</span>
+            <p>#2 Ut non leo nisi. Praesent quis urna viverra, sagittis 
+tortor feugiat, iaculis purus. Suspendisse non nisl at diam pulvinar 
+cursus id efficitur sapien. Maecenas gravida elit a.</p>
+          </div>
+        </div></div><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_3.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Proin sit amet fringilla</h4>
+            <span>Vulputate</span>
+            <p>#3 Aliquam mollis lacus eget metus efficitur lobortis. 
+Suspendisse libero lacus, accumsan vitae commodo tristique, luctus 
+gravida metus.</p>
+          </div>
+        </div></div><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_2.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>In volutpat augue lectus</h4>
+            <span>Elementum</span>
+            <p>#4 Aliquam mollis lacus eget metus efficitur lobortis. 
+Suspendisse libero lacus, accumsan vitae commodo tristique, luctus 
+gravida metus.</p>
+          </div>
+        </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_1.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Cras commodo odio</h4>
+            <span>Aliquam</span>
+            <p>#5 Mauris lacinia pretium libero, ut tincidunt lacus 
+molestie ornare. Phasellus a facilisis erat. Praesent eleifend nibh 
+mauris, quis sodales lorem convallis pulvinar.</p>
+          </div>
+        </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_3.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Sed at massa turpis</h4>
+            <span>Curabitur</span>
+            <p>#6 Vestibulum tincidunt ornare ligula vel molestie. 
+Curabitur hendrerit mauris mollis ipsum vulputate rutrum. Phasellus 
+luctus odio eget dui imperdiet.</p>
+          </div>
+        </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_2.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Aliquam mollis lacus</h4>
+            <span>Suspendisse</span>
+            <p>#7 Suspendisse suscipit nulla sed nisl fermentum, auctor 
+suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus 
+pharetra in.</p>
+          </div>
+        </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_1.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Mauris lacinia pretium</h4>
+            <span>Vestibulum</span>
+            <p>#8 Suspendisse suscipit nulla sed nisl fermentum, auctor 
+suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus 
+pharetra in.</p>
+          </div>
+        </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
+          <div class="image"><img src="Sentra_files/featured_3.jpg" alt="website template image">
+            <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
+          </div>
+          <div class="text-content">
+            <h4>Proin sit amet fringilla erat</h4>
+            <span>Convallis</span>
+            <p>#9 Suspendisse suscipit nulla sed nisl fermentum, auctor 
+suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus 
+pharetra in.</p>
+          </div>
+        </div></div></div></div><div class="owl-nav"><button role="presentation" class="owl-prev disabled"><span aria-label="prev">‹</span></button><button role="presentation" class="owl-next"><span aria-label="next">›</span></button></div><div class="owl-dots"><button class="owl-dot active"><span></span></button><button class="owl-dot"><span></span></button><button class="owl-dot"><span></span></button></div></div>
+    </div>
+  </section>
+  <section id="projects" class="content-section">
+    <div class="section-heading">
+      <h1>Recent<br>
+        <em>Projects</em></h1>
+      <p>Praesent pellentesque efficitur magna, <br>
+        sed pellentesque neque malesuada vitae.</p>
+    </div>
+    <div class="section-content">
+      <div class="masonry">
+        <div class="row">
+          <div class="item">
+            <div class="col-md-8"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_1.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_1.jpg" alt="website template image"></a></div>
+          </div>
+          <div class="item second-item">
+            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_2.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_2.jpg" alt="website template image"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_3.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_3.jpg" alt="website template image"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_4.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_4.jpg" alt="website template image"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-8"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_5.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_5.jpg" alt="website template image"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="video" class="content-section">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h1>This is a <em>company</em> presentation.</h1>
+          <p>Praesent pellentesque efficitur magna, sed pellentesque neque malesuada vitae.</p>
+        </div>
+        <div class="text-content">
+          <p>In eget ipsum sed lorem vehicula luctus. Curabitur non 
+dolor rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque
+ id auctor tellus, vel ultricies augue. Duis condimentum aliquet 
+blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis 
+ultricies ligula ac gravida.</p>
+        </div>
+        <div class="accent-button button"><a href="#blog">Continue Reading</a></div>
+      </div>
+      <div class="col-md-12">
+        <div class="box-video">
+          <div class="bg-video" style="background-image:url('assets/img/stars.jpg');">
+            <div class="bt-play">Play</div>
+          </div>
+          <div class="video-container">
+            <iframe src="Sentra_files/T0qagA4_eVQ.htm" allowfullscreen="allowfullscreen" width="100%" height="520px" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="blog" class="content-section">
+    <div class="section-heading">
+      <h1>Blog<br>
+        <em>Entries</em></h1>
+      <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. <br>
+        Phasellus luctus odio eget dui imperdiet.</p>
+    </div>
+    <div class="section-content">
+      <div class="tabs-content">
+        <div class="wrapper">
+          <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+            <li><a href="#tab1" class="active">July 2045</a></li>
+            <li><a href="#tab2">June 2045</a></li>
+            <li><a href="#tab3">May 2045</a></li>
+            <li><a href="#tab4">April 2045</a></li>
+          </ul>
+          <section id="first-tab-group" class="tabgroup">
+            <div id="tab1" style="display: block;">
+              <ul>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Integer ultrices augue</h4>
+                      <span>25 July 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Cras commodo odio ut</h4>
+                      <span>16 July 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Sed at massa turpis</h4>
+                      <span>10 July 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div id="tab2" style="display: none;">
+              <ul>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Sed at massa turpis</h4>
+                      <span>30 June 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Lorem ipsum dolor sit</h4>
+                      <span>24 June 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Cras commodo odio ut</h4>
+                      <span>12 June 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div id="tab3" style="display: none;">
+              <ul>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Cras commodo odio ut</h4>
+                      <span>26 May 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Lorem ipsum dolor sit</h4>
+                      <span>22 May 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Integer ultrices augue</h4>
+                      <span>8 May 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div id="tab4" style="display: none;">
+              <ul>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Lorem ipsum dolor sit</h4>
+                      <span>26 April 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Integer ultrices augue eu</h4>
+                      <span>24 April 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                    <div class="text-content">
+                      <h4>Cras commodo odio ut</h4>
+                      <span>20 April 2045</span>
+                      <p>Nam vel egestas nisi. Nullam lobortis magna at 
+enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor 
+tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis 
+lorem quis ipsum maximus finibus.</p>
+                      <div class="accent-button button"><a href="#contact">Continue Reading</a></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="content-section">
+    <div id="map">
+      <iframe src="Sentra_files/embed.htm" style="border:0" allowfullscreen="" width="100%" height="400px" frameborder="0"></iframe>
+    </div>
+    <div id="contact-content">
+      <div class="section-heading">
+        <h1>Contact<br>
+          <em>Sentra</em></h1>
+        <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. <br>
+          Phasellus luctus odio eget dui imperdiet.</p>
+      </div>
+      <div class="section-content">
+        <form id="contact" action="#" method="post">
+          <div class="row">
+            <div class="col-md-4">
+              <fieldset>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-4">
+              <fieldset>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-4">
+              <fieldset>
+                <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="btn">Send Message Now</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <p>Copyright © 2045 Company Name. Design: TemplateMo</p>
+  </section>
+</div>
+<script src="Sentra_files/jquery.min.js"></script>
+<script src="Sentra_files/plugins.js"></script>
+<div id="freecssfooter">
+  <div id="fcssholder">
+    <div id="bsap_2365" class="bsap bsap_2365" data-serve="CV7DP2T">
+      <style type="text/css">
+        
+          div.bsap_2365{width:100%;display:block;}div.bsap_2365 a{width:900px;}div.bsap_2365 a img{padding:0;}div.bsap_2365 a em{font-style:normal;}div.bsap_2365 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;}
+div.bsap_2365 img{border:0;clear:right;}
+div.bsap_2365 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}
+div.bsap_2365 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_2365 a{line-height:100%;}div.bsap_2365 a.adhere{width:900px;height:120px;line-height:960%;}html>body div.bsap_2365 a.adhere{width:898px;height:118px;}div.bsap_2365 img.s{height:0;width:0;}
+        
+        .bsap_2365 .ads-via { display: block; }
+        .bsap_2365 .adhere:nth-of-type(1n+1) { display: none; }
+        .bsap_2365 .adhere:nth-of-type(1) { display: block; }
+      </style>
+    <!--INLINE--><a target="_blank" rel="nofollow noopener" href="https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=1687"><img src="Sentra_files/elegantthemes-900x120.jpg" alt=""></a>
+<script type="text/javascript" id="auto_1" class="ignoreme">if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(485952, 'CV7DP2T', '');</script>
+      
+      <script type="text/javascript" id="auto_2" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(2365); </script>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+var gaProperty = 'UA-120201777-1';var disableStr = 'ga-disable-' + gaProperty;if (document.cookie.indexOf(disableStr + '=true') > -1) {window[disableStr] = true;}
+function gaOptout(){document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2045 23:59:59 UTC; path=/';window[disableStr] = true;alert('Google Tracking has been deactivated');}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-120201777-1', 'auto');ga('set', 'anonymizeIp', true);ga('send', 'pageview');
+</script>
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
