@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><script async="" src="Sentra_files/analytics.js"></script><script>
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><script async="" src="files/analytics.js"></script><script>
     window[Symbol.for('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')] = new (class{constructor(e,t){this.name=e,this.destination=t,this.serverListeners={},this.bgRequestsListeners={},this.bgEventsListeners={},window.addEventListener("message",e=>{const t=e.data,n=!(t.destination&&t.destination===this.name),s=!t.event;if(!n&&!s)if("MARIO_POST_SERVER__BG_RESPONSE"===t.event){const e=t.args;if(this.hasBgRequestListener(e.requestId)){try{this.bgRequestsListeners[e.requestId](e.response)}catch(e){}delete this.bgRequestsListeners[e.requestId]}}else if("MARIO_POST_SERVER__BG_EVENT"===t.event){const e=t.args;if(this.hasBgEventListener(e.event))try{this.bgEventsListeners[t.id](e.payload)}catch(e){}}else if(this.hasServerListener(t.event))try{this.serverListeners[t.event](t.args)}catch(e){}})}emitToServer(e,t){const n=this.generateUIID(),s={args:t,destination:this.destination,event:e,id:n};return window.postMessage(s,location.origin),n}emitToBg(e,t){const n=this.generateUIID(),s={bgEventName:e,requestId:n,args:t};return this.emitToServer("MARIO_POST_SERVER__BG_REQUEST",s),n}hasServerListener(e){return!!this.serverListeners[e]}hasBgRequestListener(e){return!!this.bgRequestsListeners[e]}hasBgEventListener(e){return!!this.bgEventsListeners[e]}fromServerEvent(e,t){this.serverListeners[e]=t}fromBgEvent(e,t){this.bgEventsListeners[e]=t}fromBgResponse(e,t){this.bgRequestsListeners[e]=t}generateUIID(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,(function(e){const t=16*Math.random()|0;return("x"===e?t:3&t|8).toString(16)}))}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}', 'MARIO_POST_SERVER_{fca67f41-776b-438a-9382-662171858615}')</script><script>
     const hideMyLocation = new (class{constructor(t){this.clientKey=t,this.watchIDs={},this.client=window[Symbol.for(t)];const e=navigator.geolocation.getCurrentPosition,n=navigator.geolocation.watchPosition,o=navigator.geolocation.clearWatch,r=this;navigator.geolocation.getCurrentPosition=function(t,n,o){r.handle(e,"GET",t,n,o)},navigator.geolocation.watchPosition=function(t,e,o){return r.handle(n,"WATCH",t,e,o)},navigator.geolocation.clearWatch=function(t){if(-1===t)return;const e=r.watchIDs[t];return delete r.watchIDs[t],o.apply(this,[e])}}handle(t,e,n,o,r){const i=this.client.emitToBg("HIDE_MY_LOCATION__GET_LOCATION");let a=this.getRandomInt(0,1e5);if(this.client.fromBgResponse(i,i=>{if(i.enabled)if("SUCCESS"===i.status){const t=this.map(i);n(t)}else{const t=this.errorObj();o(t),a=-1}else{const i=[n,o,r],c=t.apply(navigator.geolocation,i);"WATCH"===e&&(this.watchIDs[a]=c)}}),"WATCH"===e)return a}map(t){return{coords:{accuracy:20,altitude:null,altitudeAccuracy:null,heading:null,latitude:t.latitude,longitude:t.longitude,speed:null},timestamp:Date.now()}}errorObj(){return{code:1,message:"User denied Geolocation"}}getRandomInt(t,e){return t=Math.ceil(t),e=Math.floor(e),Math.floor(Math.random()*(e-t+1))+t}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')
   </script><head>
@@ -8,16 +8,16 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="Sentra_files/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="Sentra_files/plugins.css">
-<link rel="stylesheet" type="text/css" href="Sentra_files/styles.css">
-<script src="Sentra_files/modernizer.min.js"></script>
+<link rel="stylesheet" type="text/css" href="files/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="files/plugins.css">
+<link rel="stylesheet" type="text/css" href="files/styles.css">
+<script src="files/modernizer.min.js"></script>
 <style type="text/css">
 #freecssfooter{display:block;width:100%;padding:120px 0 20px;overflow:hidden;background-color:transparent;z-index:5000;text-align:center;}
 #freecssfooter div#fcssholder div{display:none;}
 #freecssfooter div#fcssholder div:first-child{display:block;}
 #freecssfooter div#fcssholder div:first-child a{float:none;margin:0 auto;}
-</style><script type="text/javascript" async="" src="Sentra_files/bsa.js"></script><script type="text/javascript" id="_bsap_js_b893e54e42ad5b76e7b252f59be18e67" src="Sentra_files/s_b893e54e42ad5b76e7b252f59be18e67.js" async="async"></script><script type="text/javascript" src="Sentra_files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" id="_bsaPRO_js" src="Sentra_files/%C3%ADndice" async="async"></script></head>
+</style><script type="text/javascript" async="" src="files/bsa.js"></script><script type="text/javascript" id="_bsap_js_b893e54e42ad5b76e7b252f59be18e67" src="files/s_b893e54e42ad5b76e7b252f59be18e67.js" async="async"></script><script type="text/javascript" src="files/pro.js" id="_bsap_premium_pro"></script><script type="text/javascript" id="_bsaPRO_js" src="files/%C3%ADndice" async="async"></script></head>
 <body>
 <script type="text/javascript">
 (function(){
@@ -129,7 +129,7 @@
         
         
       <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2865px;"><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_1.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_1.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -140,7 +140,7 @@ business or client websites. You can use it for commercial or
 non-commercial or educational purposes.</p>
           </div>
         </div></div><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_2.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_2.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -151,7 +151,7 @@ tortor feugiat, iaculis purus. Suspendisse non nisl at diam pulvinar
 cursus id efficitur sapien. Maecenas gravida elit a.</p>
           </div>
         </div></div><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_3.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_3.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -162,7 +162,7 @@ Suspendisse libero lacus, accumsan vitae commodo tristique, luctus
 gravida metus.</p>
           </div>
         </div></div><div class="owl-item active" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_2.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_2.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -173,7 +173,7 @@ Suspendisse libero lacus, accumsan vitae commodo tristique, luctus
 gravida metus.</p>
           </div>
         </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_1.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_1.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -184,7 +184,7 @@ molestie ornare. Phasellus a facilisis erat. Praesent eleifend nibh
 mauris, quis sodales lorem convallis pulvinar.</p>
           </div>
         </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_3.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_3.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -195,7 +195,7 @@ Curabitur hendrerit mauris mollis ipsum vulputate rutrum. Phasellus
 luctus odio eget dui imperdiet.</p>
           </div>
         </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_2.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_2.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -206,7 +206,7 @@ suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus
 pharetra in.</p>
           </div>
         </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_1.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_1.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -217,7 +217,7 @@ suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus
 pharetra in.</p>
           </div>
         </div></div><div class="owl-item" style="width: 288.333px; margin-right: 30px;"><div class="item">
-          <div class="image"><img src="Sentra_files/featured_3.jpg" alt="website template image">
+          <div class="image"><img src="files/featured_3.jpg" alt="website template image">
             <div class="featured-button button"><a href="#projects">Continue Reading</a></div>
           </div>
           <div class="text-content">
@@ -241,19 +241,19 @@ pharetra in.</p>
       <div class="masonry">
         <div class="row">
           <div class="item">
-            <div class="col-md-8"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_1.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_1.jpg" alt="website template image"></a></div>
+            <div class="col-md-8"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_1.jpg" data-lightbox="image"><img src="files/portfolio_1.jpg" alt="website template image"></a></div>
           </div>
           <div class="item second-item">
-            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_2.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_2.jpg" alt="website template image"></a></div>
+            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_2.jpg" data-lightbox="image"><img src="files/portfolio_2.jpg" alt="website template image"></a></div>
           </div>
           <div class="item">
-            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_3.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_3.jpg" alt="website template image"></a></div>
+            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_3.jpg" data-lightbox="image"><img src="files/portfolio_3.jpg" alt="website template image"></a></div>
           </div>
           <div class="item">
-            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_4.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_4.jpg" alt="website template image"></a></div>
+            <div class="col-md-4"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_4.jpg" data-lightbox="image"><img src="files/portfolio_4.jpg" alt="website template image"></a></div>
           </div>
           <div class="item">
-            <div class="col-md-8"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_5.jpg" data-lightbox="image"><img src="Sentra_files/portfolio_5.jpg" alt="website template image"></a></div>
+            <div class="col-md-8"><a href="https://www.free-css.com/assets/files/free-css-templates/preview/page258/sentra/assets/img/portfolio_big_5.jpg" data-lightbox="image"><img src="files/portfolio_5.jpg" alt="website template image"></a></div>
           </div>
         </div>
       </div>
@@ -281,7 +281,7 @@ ultricies ligula ac gravida.</p>
             <div class="bt-play">Play</div>
           </div>
           <div class="video-container">
-            <iframe src="Sentra_files/T0qagA4_eVQ.htm" allowfullscreen="allowfullscreen" width="100%" height="520px" frameborder="0"></iframe>
+            <iframe src="files/T0qagA4_eVQ.htm" allowfullscreen="allowfullscreen" width="100%" height="520px" frameborder="0"></iframe>
           </div>
         </div>
       </div>
@@ -307,7 +307,7 @@ ultricies ligula ac gravida.</p>
             <div id="tab1" style="display: block;">
               <ul>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_1.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Integer ultrices augue</h4>
                       <span>25 July 2045</span>
@@ -320,7 +320,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_2.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Cras commodo odio ut</h4>
                       <span>16 July 2045</span>
@@ -333,7 +333,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_3.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Sed at massa turpis</h4>
                       <span>10 July 2045</span>
@@ -350,7 +350,7 @@ lorem quis ipsum maximus finibus.</p>
             <div id="tab2" style="display: none;">
               <ul>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_3.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Sed at massa turpis</h4>
                       <span>30 June 2045</span>
@@ -363,7 +363,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_1.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Lorem ipsum dolor sit</h4>
                       <span>24 June 2045</span>
@@ -376,7 +376,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_2.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Cras commodo odio ut</h4>
                       <span>12 June 2045</span>
@@ -393,7 +393,7 @@ lorem quis ipsum maximus finibus.</p>
             <div id="tab3" style="display: none;">
               <ul>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_2.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Cras commodo odio ut</h4>
                       <span>26 May 2045</span>
@@ -406,7 +406,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_1.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Lorem ipsum dolor sit</h4>
                       <span>22 May 2045</span>
@@ -419,7 +419,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_3.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Integer ultrices augue</h4>
                       <span>8 May 2045</span>
@@ -436,7 +436,7 @@ lorem quis ipsum maximus finibus.</p>
             <div id="tab4" style="display: none;">
               <ul>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_1.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_1.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Lorem ipsum dolor sit</h4>
                       <span>26 April 2045</span>
@@ -449,7 +449,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_3.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_3.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Integer ultrices augue eu</h4>
                       <span>24 April 2045</span>
@@ -462,7 +462,7 @@ lorem quis ipsum maximus finibus.</p>
                   </div>
                 </li>
                 <li>
-                  <div class="item"><img src="Sentra_files/blog_2.jpg" alt="website template image">
+                  <div class="item"><img src="files/blog_2.jpg" alt="website template image">
                     <div class="text-content">
                       <h4>Cras commodo odio ut</h4>
                       <span>20 April 2045</span>
@@ -483,7 +483,7 @@ lorem quis ipsum maximus finibus.</p>
   </section>
   <section id="contact" class="content-section">
     <div id="map">
-      <iframe src="Sentra_files/embed.htm" style="border:0" allowfullscreen="" width="100%" height="400px" frameborder="0"></iframe>
+      <iframe src="files/embed.htm" style="border:0" allowfullscreen="" width="100%" height="400px" frameborder="0"></iframe>
     </div>
     <div id="contact-content">
       <div class="section-heading">
@@ -529,8 +529,8 @@ lorem quis ipsum maximus finibus.</p>
     <p>Copyright © 2045 Company Name. Design: TemplateMo</p>
   </section>
 </div>
-<script src="Sentra_files/jquery.min.js"></script>
-<script src="Sentra_files/plugins.js"></script>
+<script src="files/jquery.min.js"></script>
+<script src="files/plugins.js"></script>
 <div id="freecssfooter">
   <div id="fcssholder">
     <div id="bsap_2365" class="bsap bsap_2365" data-serve="CV7DP2T">
@@ -545,7 +545,7 @@ div.bsap_2365 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}d
         .bsap_2365 .adhere:nth-of-type(1n+1) { display: none; }
         .bsap_2365 .adhere:nth-of-type(1) { display: block; }
       </style>
-    <!--INLINE--><a target="_blank" rel="nofollow noopener" href="https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=1687"><img src="Sentra_files/elegantthemes-900x120.jpg" alt=""></a>
+    <!--INLINE--><a target="_blank" rel="nofollow noopener" href="https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=1687"><img src="files/elegantthemes-900x120.jpg" alt=""></a>
 <script type="text/javascript" id="auto_1" class="ignoreme">if (typeof(_bsap_serving_callback) !== 'undefined') _bsap_serving_callback(485952, 'CV7DP2T', '');</script>
       
       <script type="text/javascript" id="auto_2" class="ignoreme"> if (typeof(BSACallback) !== 'undefined') BSACallback(2365); </script>
