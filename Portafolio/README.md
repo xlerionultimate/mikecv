@@ -1,18 +1,33 @@
-# [Global: HTML5 website template](http://buckymaler.com/global)
+# [Xlerion: HTML5 Website Online Store](https://github.com/xlerionultimate)
 
-### [Featured on Freebiesbug](http://freebiesbug.com/psd-freebies/global-futuristic-one-page-portfolio-psd-html/)
+Una guía completa para mejorar el rendimiento de su sitio web a través de la optimización del sitio web
 
-Global is a modern and sleek website template crafted for professionals in the creative industry. Global can serve as a single page portfolio or be easily modified to serve as the perfect beginning for a hip creative agency.
+¿Qué es la optimización de sitios web y cómo puede beneficiar a su negocio?
 
-The original PSD is included and was provided by [Sergey Melnik](https://www.behance.net/SergeyMelnik).
+palabras clave: optimización de sitios web, optimización web, herramientas de optimización de sitios web, optimización del rendimiento del sitio web)
 
-This project was developed with HTML5, Sass, jQuery, and Hammer.js.
+Factores esenciales para un sitio web totalmente optimizado
 
-Performance basics are covered: assets are minified into single CSS and JS files, and the images are optimized.
+palabras clave: optimización de la velocidad de la página, optimización del diseño del sitio web, diseño receptivo, optimización de motores de búsqueda)
 
-[LIVE PREVIEW](http://buckymaler.com/global)
+Estrategias de optimización de motores de búsqueda para aumentar el tráfico y las clasificaciones
+
+palabras clave: técnicas de SEO, herramienta de auditoría de SEO, lista de verificación de SEO en la página)
+
+[LIVE PREVIEW](https://xlerionultimate.github.io/mikecv/TiendaOnline/)
+
+Integración de herramientas y técnicas avanzadas de SEO para máxima visibilidad
+
+palabras clave: herramientas de investigación de palabras clave, estrategia de marketing de contenido)
+
+Cómo utilizar tácticas de optimización de la tasa de conversión para aumentar las conversiones
+
+palabras clave: técnicas de optimización de la tasa de conversión, herramienta de análisis CRM)
+
+Conclusión: aproveche el poder de la optimización del sitio web para lograr los máximos resultados
+
+
 
 ## Misc:
 
-* Follow Bucky: [Twitter](https://twitter.com/BuckyMaler), [GitHub](https://github.com/BuckyMaler)
-* Follow Sergey: [Dribbble](https://dribbble.com/sergeymelnik), [Bēhance](https://www.behance.net/SergeyMelnik)
+* Follow Mike: [Twitter](https://twitter.com/xlerion), [GitHub](https://github.com/xlerionultimate)
